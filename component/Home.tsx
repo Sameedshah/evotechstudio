@@ -102,9 +102,8 @@ const Home = () => {
               <span className="text-gradient">Digital Excellence</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We create stunning digital experiences that drive growth,
-              captivate audiences, and transform businesses.
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              We create stunning digital experiences that drive growth, captivate audiences, and transform businesses. Our expert team specializes in modern web development, innovative mobile applications, and comprehensive digital solutions that help companies thrive in today's competitive digital landscape. From startups to established enterprises, we deliver cutting-edge technology solutions that exceed expectations and drive measurable results.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -168,8 +167,8 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-black mb-4">
               Our <span className="text-gradient">Services</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive digital solutions tailored to your business needs
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Comprehensive digital solutions tailored to your business needs. We combine technical expertise with creative innovation to deliver web development, mobile applications, UI/UX design, and digital marketing services that drive real business growth and enhance user experiences across all platforms.
             </p>
           </motion.div>
 
@@ -227,8 +226,8 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-black mb-4">
               Client <span className="text-gradient">Success Stories</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Don't just take our word for it - hear from our satisfied clients
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Don't just take our word for it - hear from our satisfied clients who have experienced remarkable growth and success through our digital solutions. We pride ourselves on building long-term partnerships and delivering exceptional results that exceed expectations every time.
             </p>
           </motion.div>
 
@@ -263,6 +262,25 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
+              Why Choose <span className="text-gradient">EvoTech Studio</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              At EvoTech Studio, we understand that every business is unique. That's why we take a personalized approach to every project, combining industry best practices with innovative solutions to deliver exceptional results. Our team of experienced developers, designers, and digital strategists work collaboratively to ensure your project not only meets but exceeds your expectations. We specialize in React, Next.js, Node.js, and modern web technologies, ensuring your digital presence is built on a solid, scalable foundation. From initial concept to final deployment and ongoing maintenance, we're your trusted partner in digital transformation. Our commitment to quality, attention to detail, and customer satisfaction has earned us a reputation as a leading digital agency that businesses trust with their most important projects.
+            </p>
+          </motion.div>
         </div>
       </section>
 
