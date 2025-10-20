@@ -208,7 +208,7 @@ This project is licensed under the MIT License.
 
 ## 📞 Contact
 
-- **Email**: info@evotechstudio.org
+- **Email**: info@evotechstudio.dev
 - **Phone**: +92 370 0589908
 - **Location**: Karachi, Pakistan
 
