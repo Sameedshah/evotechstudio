@@ -4,6 +4,7 @@ import "./globals.css";
 import ClientLayout from "@/component/ClientLayout";
 import { ThemeProvider } from "@/component/ThemeProvider";
 import { Toaster } from "sonner";
+import { Analytics } from "@/component/Analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "EvoTech Studio - Innovative Web Development & Digital Solutions",
+    default: "EvoTech Studio - Web Development & Digital Solutions",
     template: "%s | EvoTech Studio"
   },
   description: "EvoTech Studio delivers cutting-edge web development, mobile apps, and digital solutions. Transform your business with our expert development team specializing in React, Next.js, and modern technologies.",
@@ -94,12 +95,37 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Preconnect to external domains for faster loading */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Favicons and PWA */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Google Analytics 4 */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-S7ZYMDYKZD"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-S7ZYMDYKZD', {
+                page_title: document.title,
+                page_location: window.location.href,
+              });
+            `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -112,6 +138,7 @@ export default function RootLayout({
         >
           <ClientLayout>{children}</ClientLayout>
           <Toaster />
+          <Analytics />
         </ThemeProvider>
 
         {/* Structured Data for SEO */}
