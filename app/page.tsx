@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "EvoTech Studio - Web Development & Digital Solutions",
-  description: "Transform your business with EvoTech Studio's cutting-edge web development, mobile apps, and digital solutions. Expert React, Next.js, and modern technology development services that drive growth and exceed expectations.",
+  description: "Expert web development & digital solutions by EvoTech Studio. Custom React, Next.js apps & mobile development that drive growth. Get free consultation today!",
   keywords: [
     "web development company",
     "mobile app development", 
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "EvoTech Studio - Web Development & Digital Solutions",
-    description: "Transform your business with EvoTech Studio's cutting-edge web development, mobile apps, and digital solutions.",
+    description: "Expert web development & digital solutions by EvoTech Studio. Custom React, Next.js apps & mobile development that drive growth.",
     url: "https://evotechstudio.dev",
     type: "website",
     siteName: "EvoTech Studio",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "EvoTech Studio - Web Development & Digital Solutions", 
-    description: "Transform your business with EvoTech Studio's cutting-edge web development, mobile apps, and digital solutions.",
+    description: "Expert web development & digital solutions by EvoTech Studio. Custom React, Next.js apps & mobile development that drive growth.",
     images: ["https://evotechstudio.dev/og-home.jpg"]
   }
 };

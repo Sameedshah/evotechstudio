@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Our Services - Web Development, Mobile Apps & Digital Solutions",
-  description: "Explore EvoTech Studio's comprehensive services: custom web development, mobile app development, UI/UX design, e-commerce solutions, and digital transformation consulting.",
+  description: "Custom web development, mobile apps, UI/UX design & e-commerce solutions. React, Next.js expertise. Transform your business with EvoTech Studio.",
   keywords: [
     "web development services",
     "mobile app development services",

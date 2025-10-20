@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "EvoTech Studio - Web Development & Digital Solutions",
     template: "%s | EvoTech Studio"
   },
-  description: "EvoTech Studio delivers cutting-edge web development, mobile apps, and digital solutions. Transform your business with our expert development team specializing in React, Next.js, and modern technologies.",
+  description: "Expert web development & digital solutions by EvoTech Studio. Custom React, Next.js apps & mobile development that drive growth. Get free consultation today!",
   keywords: [
     "web development",
     "mobile app development",

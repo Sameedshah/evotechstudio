@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Contact EvoTech Studio - Get Your Project Started",
-  description: "Ready to transform your business? Contact EvoTech Studio for a free consultation. Get expert web development, mobile app development, and digital solution services.",
+  description: "Ready to transform your business? Contact EvoTech Studio for free consultation. Expert web development, mobile apps & digital solutions await.",
   keywords: [
     "contact EvoTech Studio",
     "web development consultation",

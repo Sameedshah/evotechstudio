@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "About EvoTech Studio - Expert Development Team",
-  description: "Learn about EvoTech Studio's mission, values, and expert development team. Discover our journey in delivering innovative web development and digital solutions since our founding.",
+  description: "Meet EvoTech Studio's expert development team. 5+ years delivering innovative web development & digital solutions. Learn our mission & values.",
   keywords: [
     "about EvoTech Studio",
     "development team",
