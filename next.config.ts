@@ -7,11 +7,12 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-  },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+  },
+  // Disable problematic experimental features
+  experimental: {
+    // optimizeCss: true, // Disabled - causes critters module error
   },
   // SEO optimizations
   async headers() {
