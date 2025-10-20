@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // output: 'export', // Disabled for manual export
+  // output: 'export', // Disabled for Vercel deployment
   trailingSlash: true,
   images: {
     unoptimized: true,

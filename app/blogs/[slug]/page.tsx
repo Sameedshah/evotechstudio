@@ -52,9 +52,18 @@ async function getPost(slug: string): Promise<Post | null> {
 }
 
 export async function generateStaticParams() {
-  // Return empty array for now to allow build to complete
-  // You can add blog posts later and rebuild
-  return []
+  try {
+    const query = `*[_type == "post" && defined(slug.current)]{ slug }`
+    const posts = await client.fetch(query)
+    
+    return posts.map((post: any) => ({
+      slug: post.slug.current,
+    }))
+  } catch (error) {
+    console.warn('Failed to fetch posts for static generation:', error)
+    // Return empty array if no posts exist yet
+    return []
+  }
 }
 
 const components = {

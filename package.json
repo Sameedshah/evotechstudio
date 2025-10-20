@@ -9,7 +9,12 @@
     "lint": "eslint",
     "sanity": "sanity dev",
     "generate-sitemap": "node scripts/generate-sitemap.js",
-    "prebuild": "npm run generate-sitemap"
+    "prebuild": "npm run generate-sitemap",
+    "prepare-deployment": "node scripts/prepare-deployment.js",
+    "restore-routes": "node scripts/restore-dynamic-routes.js",
+    "build-static": "npm run prepare-deployment && npm run build",
+    "deploy": "vercel --prod",
+    "deploy-preview": "vercel"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
