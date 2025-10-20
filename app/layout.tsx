@@ -100,7 +100,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+
         {/* Favicons and PWA */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -108,7 +108,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
 
       </head>
       <body
@@ -142,7 +142,7 @@ export default function RootLayout({
           <Analytics />
         </ThemeProvider>
 
-        {/* Structured Data for SEO */}
+        {/* Organization Schema (Structured Data) for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -150,6 +150,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "EvoTech Studio",
+              "alternateName": "Evo Tech Studio",
               "url": "https://evotechstudio.dev",
               "logo": "https://evotechstudio.dev/logo.png",
               "description": "EvoTech Studio delivers cutting-edge web development, mobile apps, and digital solutions.",
@@ -163,9 +164,9 @@ export default function RootLayout({
                 "url": "https://evotechstudio.dev/contact"
               },
               "sameAs": [
-                "https://twitter.com/evotechstudio",
-                "https://linkedin.com/company/evotechstudio",
-                "https://github.com/evotechstudio"
+                "https://www.linkedin.com/company/evotechstudio",
+                "https://www.instagram.com/evotech.studio",
+                "https://www.facebook.com/EvoTechStudio"
               ],
               "service": [
                 {
