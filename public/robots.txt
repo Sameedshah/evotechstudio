@@ -1,0 +1,51 @@
+# Robots.txt for evotechstudio.dev
+# Optimized for SEO and search engine crawling
+
+User-agent: *
+Allow: /
+
+# Allow all major search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /studio/
+Disallow: /.well-known/
+
+# Allow important files
+Allow: /api/sitemap
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Crawl delay (be respectful to servers)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://evotechstudio.dev/sitemap.xml
