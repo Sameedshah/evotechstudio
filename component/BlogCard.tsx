@@ -6,26 +6,10 @@ import Image from 'next/image'
 import { urlFor } from '@/lib/sanity'
 import { format } from 'date-fns'
 import { Calendar, User } from 'lucide-react'
-
-interface Post {
-  _id: string
-  title: string
-  slug: { current: string }
-  excerpt?: string
-  mainImage?: any
-  publishedAt: string
-  author?: {
-    name: string
-    image?: any
-  }
-  categories?: Array<{
-    title: string
-    slug: { current: string }
-  }>
-}
+import { BlogPost } from '@/lib/types'
 
 interface BlogCardProps {
-  post: Post
+  post: BlogPost
   index: number
 }
 
@@ -59,7 +43,10 @@ export function BlogCard({ post, index }: BlogCardProps) {
           <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
             <div className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
-              {format(new Date(post.publishedAt), 'MMM dd, yyyy')}
+              {post.publishedAt 
+                ? format(new Date(post.publishedAt), 'MMM dd, yyyy')
+                : 'Draft'
+              }
             </div>
             {post.author && (
               <div className="flex items-center gap-1">

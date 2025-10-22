@@ -4,17 +4,19 @@ export interface BlogPost {
   slug: {
     current: string
   }
-  publishedAt: string
+  publishedAt?: string
+  _createdAt?: string
   excerpt?: string
-  mainImage?: {
-    asset: {
-      _ref: string
-    }
-    alt?: string
-  }
+  mainImage?: any
   body?: any[]
-  author?: string
-  categories?: string[]
+  author?: {
+    name: string
+    image?: any
+  }
+  categories?: Array<{
+    title: string
+    slug: { current: string }
+  }>
 }
 
 export interface Author {

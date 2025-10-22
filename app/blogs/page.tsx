@@ -1,45 +1,37 @@
 import { client } from '@/lib/sanity'
 import { BlogCard } from '@/component/BlogCard'
-import { motion } from 'framer-motion'
+import { BlogPost } from '@/lib/types'
 
-interface Post {
-  _id: string
-  title: string
-  slug: { current: string }
-  excerpt?: string
-  mainImage?: any
-  publishedAt: string
-  author?: {
-    name: string
-    image?: any
-  }
-  categories?: Array<{
-    title: string
-    slug: { current: string }
-  }>
-}
-
-async function getPosts(): Promise<Post[]> {
-  const query = `
-    *[_type == "post"] | order(publishedAt desc) {
-      _id,
-      title,
-      slug,
-      excerpt,
-      mainImage,
-      publishedAt,
-      author->{
-        name,
-        image
-      },
-      categories[]->{
+async function getPosts(): Promise<BlogPost[]> {
+  try {
+    const query = `
+      *[_type == "post"] | order(coalesce(publishedAt, _createdAt) desc) {
+        _id,
         title,
-        slug
+        slug,
+        excerpt,
+        mainImage,
+        publishedAt,
+        _createdAt,
+        author->{
+          name,
+          image
+        },
+        categories[]->{
+          title,
+          slug
+        }
       }
-    }
-  `
-  
-  return client.fetch(query)
+    `
+
+    const posts = await client.fetch(query)
+    
+    // Filter out posts without required fields
+    return posts.filter((post: any) => post.title && post.slug?.current)
+  } catch (error) {
+    console.error('Error fetching posts:', error)
+    return []
+  }
 }
 
 export default async function BlogsPage() {

@@ -47,7 +47,7 @@ async function getPost(slug: string): Promise<Post | null> {
       }
     }
   `
-  
+
   return client.fetch(query, { slug })
 }
 
@@ -55,7 +55,7 @@ export async function generateStaticParams() {
   try {
     const query = `*[_type == "post" && defined(slug.current)]{ slug }`
     const posts = await client.fetch(query)
-    
+
     return posts.map((post: any) => ({
       slug: post.slug.current,
     }))
