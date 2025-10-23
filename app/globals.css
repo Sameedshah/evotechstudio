@@ -135,4 +135,19 @@
     z-index: 1;
     background: inherit;
   }
+  
+  /* Navbar hover fix - force hover colors */
+  .navbar-link {
+    color: hsl(var(--foreground));
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-link:hover {
+    color: hsl(var(--primary)) !important;
+  }
+  
+  .navbar-link.active {
+    color: hsl(var(--primary)) !important;
+  }
+
 }

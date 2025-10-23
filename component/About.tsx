@@ -46,6 +46,22 @@ const About = () => {
 
   const team = [
     {
+      name: "M Siddique",
+      title: "Project Manager",
+      handle: "siddique",
+      status: "Online" as const,
+      description:
+        "Mr Siddique is a highly organized and results-driven Project Manager with three years of experience successfully planning, executing, and finalizing projects across the full lifecycle.",
+      experience: "2+ Years Experience",
+      avatarUrl:
+        "/siddique.jpg",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com",
+        github: "https://github.com/",
+        instagram: "https://www.instagram.com",
+      },
+    },
+    {
       name: "Faizan Mati",
       title: "Web Developer",
       handle: "faizanmati",
@@ -81,7 +97,7 @@ const About = () => {
       name: "Raja Adnan",
       title: "Sales Lead",
       handle: "rajaadnan",
-      status: "Away" as const,
+      status: "Online" as const,
       description:
         "Raja leads our projects with a collaborative spirit, ensuring timely delivery and high client satisfaction through strong team coordination and attention to detail.",
       experience: "1+ Years Experience",

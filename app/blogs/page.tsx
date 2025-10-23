@@ -36,7 +36,6 @@ async function getPosts(): Promise<BlogPost[]> {
     // Filter out posts without required fields
     return posts.filter((post: any) => post.title && post.slug?.current)
   } catch (error) {
-    console.error('Error fetching posts:', error)
     return []
   }
 }

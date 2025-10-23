@@ -83,13 +83,12 @@ const Contact = () => {
         emailConfig.publicKey
       );
 
-      console.log("EmailJS Success:", response);
+
       toast.success("Message sent successfully! We'll get back to you soon.");
       
       // Reset form after successful submission
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
-      console.error("EmailJS Error:", error);
       toast.error("Failed to send message. Please try again or contact us directly at info@evotechstudio.dev");
     } finally {
       setIsSubmitting(false);

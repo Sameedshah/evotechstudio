@@ -94,7 +94,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="hydrated">
       <head>
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -152,7 +152,7 @@ export default function RootLayout({
               "name": "EvoTech Studio",
               "alternateName": "Evo Tech Studio",
               "url": "https://evotechstudio.dev",
-              "logo": "https://evotechstudio.dev/logo.png",
+              "logo": "https://evotechstudio.dev/favicon.ico",
               "description": "EvoTech Studio delivers cutting-edge web development, mobile apps, and digital solutions.",
               "address": {
                 "@type": "PostalAddress",

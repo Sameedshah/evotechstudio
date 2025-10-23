@@ -60,7 +60,6 @@ export async function generateStaticParams() {
       slug: post.slug.current,
     }))
   } catch (error) {
-    console.warn('Failed to fetch posts for static generation:', error)
     // Return empty array if no posts exist yet
     return []
   }

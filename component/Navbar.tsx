@@ -15,7 +15,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    
+
     // Throttle scroll events for better performance
     let ticking = false;
     const throttledScroll = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
         ticking = true;
       }
     };
-    
+
     window.addEventListener("scroll", throttledScroll, { passive: true });
     return () => window.removeEventListener("scroll", throttledScroll);
   }, []);
@@ -43,12 +43,29 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
     { name: "Portfolio", path: "/portfolio" },
-    { name: "Blogs", path: "/blogs" },
     { name: "About", path: "/about" },
+    { name: "Blogs", path: "/blogs" },
     { name: "Contact", path: "/contact" },
   ];
 
-  const isActive = useCallback((path: string) => pathname === path, [pathname]);
+  const isActive = useCallback((path: string) => {
+    // Handle exact matches
+    if (pathname === path) {
+      return true;
+    }
+    
+    // Handle home page specifically
+    if (path === "/" && pathname === "/") {
+      return true;
+    }
+    
+    // Handle other pages - check if pathname starts with path (but not for home)
+    if (path !== "/" && pathname.startsWith(path)) {
+      return true;
+    }
+    
+    return false;
+  }, [pathname]);
 
   const toggleMobileMenu = useCallback(() => {
     setIsOpen(prev => !prev);
@@ -58,11 +75,10 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/95 backdrop-blur-md shadow-lg"
+        : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -77,25 +93,23 @@ const Navbar = () => {
             </motion.div>
           </Link>
 
+
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 href={link.path}
-                className={`relative font-medium transition-colors ${
-                  isActive(link.path)
-                    ? "text-primary"
-                    : isScrolled
-                    ? "text-foreground hover:text-primary"
-                    : "text-foreground dark:text-white hover:text-primary"
-                }`}
+                className={`relative font-medium navbar-link ${isActive(link.path) ? "active" : ""
+                  }`}
               >
                 {link.name}
                 {isActive(link.path) && (
                   <motion.div
                     layoutId="activeNav"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
+                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
                 )}
               </Link>
@@ -144,11 +158,8 @@ const Navbar = () => {
                     key={link.path}
                     href={link.path}
                     onClick={() => setIsOpen(false)}
-                    className={`font-medium py-2 transition-colors ${
-                      isActive(link.path)
-                        ? "text-primary"
-                        : "text-foreground hover:text-primary"
-                    }`}
+                    className={`font-medium py-2 navbar-link ${isActive(link.path) ? "active" : ""
+                      }`}
                   >
                     {link.name}
                   </Link>
