@@ -2,6 +2,9 @@ import { client } from '@/lib/sanity'
 import { BlogCard } from '@/component/BlogCard'
 import { BlogPost } from '@/lib/types'
 
+// Revalidate every 60 seconds
+export const revalidate = 60
+
 async function getPosts(): Promise<BlogPost[]> {
   try {
     const query = `
@@ -24,7 +27,11 @@ async function getPosts(): Promise<BlogPost[]> {
       }
     `
 
-    const posts = await client.fetch(query)
+    // Fetch with cache-busting options
+    const posts = await client.fetch(query, {}, {
+      cache: 'no-store',
+      next: { revalidate: 0 }
+    })
     
     // Filter out posts without required fields
     return posts.filter((post: any) => post.title && post.slug?.current)
