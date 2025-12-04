@@ -14,10 +14,40 @@ import {
   Wrench,
   ArrowRight,
   CheckCircle,
+  Bot,
+  Cloud,
 } from "lucide-react";
 
 const Services = () => {
   const services = [
+    {
+      icon: Bot,
+      title: "AI Agents & Automation",
+      description:
+        "Leverage AI-powered solutions to automate workflows and enhance productivity.",
+      features: [
+        "Custom AI Agent Development",
+        "Workflow Automation",
+        "Chatbot Integration",
+        "Process Optimization",
+        "Machine Learning Solutions",
+        "Intelligent Data Processing",
+      ],
+    },
+    {
+      icon: Cloud,
+      title: "SaaS Application",
+      description:
+        "Build scalable cloud-based software solutions for your business needs.",
+      features: [
+        "Multi-tenant Architecture",
+        "Cloud Infrastructure Setup",
+        "Subscription Management",
+        "API Development",
+        "Scalable Backend Systems",
+        "SaaS Product Development",
+      ],
+    },
     {
       icon: Code,
       title: "Web Development",

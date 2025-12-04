@@ -13,12 +13,24 @@ import {
   ShoppingCart,
   TrendingUp,
   Star,
+  Bot,
+  Cloud,
 } from "lucide-react";
 import { Card } from "@/component/ui/card";
 import SpotlightCard from "@/component/SpotlightCard";
 
 const Home = () => {
   const services = [
+    {
+      icon: Bot,
+      title: "AI Agents & Automation",
+      description: "Intelligent automation solutions powered by AI technology.",
+    },
+    {
+      icon: Cloud,
+      title: "SaaS Application",
+      description: "Scalable cloud-based software solutions for modern businesses.",
+    },
     {
       icon: Code,
       title: "Web Development",
@@ -172,7 +184,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}

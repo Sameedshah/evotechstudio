@@ -84,7 +84,7 @@ const About = () => {
       status: "Online" as const,
       description:
         "Sameed is a dedicated AI Agent Developer who specializes in designing, training, and deploying intelligent, autonomous software agents.",
-      experience: "1+ Years Experience",
+      experience: "3+ Years Experience",
       avatarUrl:
         "/sameed.jpeg",
       socialLinks: {
@@ -100,9 +100,9 @@ const About = () => {
       status: "Online" as const,
       description:
         "Raja leads our projects with a collaborative spirit, ensuring timely delivery and high client satisfaction through strong team coordination and attention to detail.",
-      experience: "1+ Years Experience",
+      experience: "2+ Years Experience",
       avatarUrl:
-        "/adnan.jpeg",
+        "/adnan.jpg",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/raja-adnan-ahmed-853a34361",
         github: "https://github.com/WATCHERsee",
@@ -120,6 +120,20 @@ const About = () => {
         "/talha.jpg",
       socialLinks: {
         behance: "https://www.behance.net/talhauiux",
+      },
+    },
+    {
+      name: "Mehak Khan",
+      title: "Customer & Sales Support",
+      handle: "mehakkhan",
+      status: "Online" as const,
+      description:
+        "Mehak provides exceptional customer service and sales support, ensuring client satisfaction through responsive communication and proactive problem-solving.",
+      experience: "1+ Years Experience",
+      avatarUrl:
+        "/mehak.jpg",
+      socialLinks: {
+        // behance: "https://www.behance.net/talhauiux",
       },
     },
     {
@@ -290,7 +304,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 justify-items-center">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
