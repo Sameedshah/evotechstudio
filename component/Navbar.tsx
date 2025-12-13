@@ -54,17 +54,17 @@ const Navbar = () => {
     {
       name: "EvoLeads",
       description: "Generate High Quality Business leads with EvoLeads AI.",
-      url: "https://www.evoleads.evotechstudio.dev",
+      url: "https://evoleads.evotechstudio.dev",
     },
     {
       name: "EvoMedi",
       description: "AI Based Doctors Appointment System for Clinics",
-      url: "https://www.evomedi.evotechstudio.dev",
+      url: "https://evomedi.evotechstudio.dev",
     },
     {
       name: "EvoWorkflows",
       description: "Automate Your Social Media. Grow While You Sleep",
-      url: "https://www.evoworkflows.evotechstudio.dev",
+      url: "https://evoworkflows.evotechstudio.dev",
     },
   ];
 
