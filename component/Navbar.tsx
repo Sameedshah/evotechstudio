@@ -61,6 +61,11 @@ const Navbar = () => {
       description: "AI Based Doctors Appointment System for Clinics",
       url: "https://www.evomedi.evotechstudio.dev",
     },
+    {
+      name: "EvoWorkflows",
+      description: "Automate Your Social Media. Grow While You Sleep",
+      url: "https://www.evoworkflows.evotechstudio.dev",
+    },
   ];
 
   const isActive = useCallback((path: string) => {
